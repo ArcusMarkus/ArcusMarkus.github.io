@@ -4,12 +4,19 @@ h1 {
     text-align: center;
     font-size: 300%;
 }
+
+.description{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    text-align: center;
+}
+
 body {
     background-color: rgb(34, 215, 52);
 }
+
 .Sticky{
-    background-image: url(https://tse1.mm.bing.net/th/id/OIP.CZlXjDdjMySuXM2r76EdawAAAA?rs=1&pid=ImgDetMain&o=7&rm=3);
-    width: 100%;
-    height: 500%;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
