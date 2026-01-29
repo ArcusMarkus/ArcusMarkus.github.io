@@ -43,4 +43,6 @@ body {
     background-image: url("https://th.bing.com/th/id/OIP.3r2IO1WD2Okr_JGlgTcsbAHaEh?w=239&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3");
     background-repeat: no-repeat;
     background-position: cover;
+    margin: auto;
+    padding: 0%;
 }
