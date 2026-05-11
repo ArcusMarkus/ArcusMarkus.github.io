@@ -22,3 +22,41 @@ document.getElementById("animebtn").addEventListener("click", () =>{
             `;
     });
 });
+document.getElementById("pokemonbtn").addEventListener("click", () => {
+
+    const pokemon = document.getElementById("pokemonInput").value.toLowerCase();
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Pokemon not found");
+            }
+            return response.json();
+        })
+        .then(data => {
+
+            document.getElementById("pokemonData").innerHTML = `
+                <h3>${data.name.toUpperCase()}</h3>
+
+                <img src="${data.sprites.front_default}" width="200">
+
+                <p><strong>Height:</strong> ${data.height}</p>
+
+                <p><strong>Weight:</strong> ${data.weight}</p>
+
+                <p>
+                    <strong>Type:</strong>
+                    ${data.types[0].type.name}
+                </p>
+            `;
+        })
+        .catch(error => {
+
+            document.getElementById("pokemonData").innerHTML = `
+                <p>Pokemon not found.</p>
+            `;
+
+            console.log(error);
+        });
+
+});
